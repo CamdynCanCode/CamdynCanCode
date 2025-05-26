@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CamdynCanCode</title>
+  <title>Camdyn Can Code</title>
   <style>
     body {
       margin: 0;
@@ -23,10 +23,16 @@
       align-items: center;
       padding: 10px 20px;
       justify-content: space-between;
+      position: relative;
+    }
+    .left-nav {
+      display: flex;
+      align-items: center;
     }
     .logo {
       font-weight: bold;
       font-size: 24px;
+      margin-right: 20px;
     }
     .hamburger {
       display: none;
@@ -41,7 +47,7 @@
     }
     .nav-item {
       position: relative;
-      margin-left: 20px;
+      margin-left: 15px;
     }
     .nav-item > a {
       color: white;
@@ -121,34 +127,38 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo">CamdynCanCode</div>
+    <div class="left-nav">
+      <div class="logo">Camdyn Can Code</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="/index.html">Home</a></li>
+        <li class="nav-item">
+          <a tabindex="0">Apps ▼</a>
+          <div class="dropdown-content">
+            <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
+            <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a tabindex="0">Games ▼</a>
+          <div class="dropdown-content">
+            <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item"><a href="/">Home</a></li>
-      <li class="nav-item">
-        <a tabindex="0">Apps ▼</a>
-        <div class="dropdown-content">
-          <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
-          <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a tabindex="0">Games ▼</a>
-        <div class="dropdown-content">
-          <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
-        </div>
-      </li>
-    </ul>
   </nav>
 
-  <!-- Same as index.html structure, change only title and main content -->
-  <h1>Privacy Policy for Code Breaker</h1>
-  <p>We use AdMob to show ads in Code Breaker. AdMob may collect and use certain personal and device information in accordance with their privacy policy.</p>
-  <p>We do not collect or store any personal data ourselves. All ad-related data is handled by Google AdMob.</p>
-  <p>By using this app, you agree to AdMob's terms and data handling practices.</p>
+  <main>
+    <h1>Privacy Policy for Code Breaker</h1>
+    <p>We use Google AdMob to serve ads in Code Breaker. AdMob may collect limited information for ad targeting and performance measurement.</p>
+    <p>Camdyn Can Code does not store or process any personal data directly. Ad-related data is handled by Google, following their privacy policy.</p>
+    <p>You can review Google’s AdMob policy at: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a>.</p>
+  </main>
+
 
   <footer>
-    &copy; 2025 CamdynCanCode. All rights reserved.
+    &copy; 2025 Camdyn Can Code. All rights reserved.
   </footer>
 
   <script>
