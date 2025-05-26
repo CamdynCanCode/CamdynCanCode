@@ -1,35 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CamdynCanCode - Home</title>
   <style>
+    /* Reset and base */
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #f8f9fa;
+      background: #f4f6f8;
       color: #333;
-      line-height: 1.6;
     }
-    h1 {
-      color: #0066cc;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #007acc;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-right: 40px;
+    }
+
+    /* Nav menu */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-item {
+      position: relative;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    .nav-item:hover > a {
+      text-decoration: underline;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: #333;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      top: 35px;
+      left: 0;
+      z-index: 1001;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+      color: #007acc;
+    }
+
+    /* Show dropdown on hover */
+    .nav-item:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Main content */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    main h1 {
+      margin-top: 40px;
+      color: #007acc;
+    }
+    main p {
+      font-size: 18px;
+      margin: 20px 0 40px;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-wrap: wrap;
+      }
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      .nav-item {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #e7f1ff;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>
-    This app, <strong>Code Breaker</strong>, does not collect or share any personal information with third parties.
-  </p>
-  <p>
-    AdMob may collect anonymous usage data for the purpose of serving personalized ads. Please refer to Google's
-    <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Advertising Policies</a> for more information.
-  </p>
-  <p>
-    If you have any questions, feel free to contact us at <a href="mailto:youremail@example.com">youremail@example.com</a>.
-  </p>
+
+  <nav class="navbar">
+    <div class="logo">CamdynCanCode</div>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="#">Apps ▼</a>
+        <div class="dropdown-content">
+          <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
+          <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#">Games ▼</a>
+        <div class="dropdown-content">
+          <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Welcome to CamdynCanCode</h1>
+    <p>Discover our apps and games! Use the navigation bar above to explore Code Breaker, Rizzler, and Ignition Point.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 CamdynCanCode. All rights reserved.
+  </footer>
+
 </body>
 </html>
