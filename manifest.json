@@ -1,0 +1,9 @@
+{
+  "name": "Camdyn Can Code",
+  "short_name": "Camdyn",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#007acc",
+  "theme_color": "#007acc",
+  "description": "Apps and games by Camdyn Can Code"
+}
