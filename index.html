@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CamdynCanCode - Home</title>
+  <title>CamdynCanCode</title>
   <style>
     body {
       margin: 0;
@@ -16,72 +16,68 @@
       text-decoration: none;
       color: inherit;
     }
-
-    /* Navbar */
     .navbar {
       background-color: #007acc;
+      color: white;
       display: flex;
       align-items: center;
       padding: 10px 20px;
-      color: white;
+      justify-content: space-between;
     }
-    .navbar .logo {
+    .logo {
       font-weight: bold;
       font-size: 24px;
-      margin-right: 40px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
     }
     .nav-menu {
-      list-style: none;
       display: flex;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
     .nav-item {
       position: relative;
-      margin-right: 30px;
+      margin-left: 20px;
     }
     .nav-item > a {
+      color: white;
       cursor: pointer;
     }
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      color: #333;
+      color: black;
       min-width: 160px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border-radius: 4px;
-      top: 35px;
+      top: 30px;
       z-index: 1001;
     }
     .dropdown-content a {
       display: block;
       padding: 10px 15px;
-      border-bottom: 1px solid #ddd;
-    }
-    .dropdown-content a:last-child {
-      border-bottom: none;
     }
     .dropdown-content a:hover {
       background-color: #f0f0f0;
       color: #007acc;
     }
-
-    /* Keep dropdown open on hover */
     .nav-item:hover .dropdown-content,
     .nav-item:focus-within .dropdown-content {
       display: block;
     }
 
-    /* Main content */
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
       flex: 1;
     }
 
-    /* Footer pinned to bottom */
     footer {
       text-align: center;
       padding: 15px 10px;
@@ -90,19 +86,34 @@
       background: #f0f0f0;
     }
 
-    @media (max-width: 600px) {
-      .navbar {
-        flex-wrap: wrap;
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
       }
       .nav-menu {
+        display: none;
         flex-direction: column;
-        width: 100%;
+        background-color: #007acc;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1002;
+        padding: 20px;
+      }
+      .nav-menu.show {
+        display: flex;
+      }
+      .nav-item {
+        margin: 15px 0;
       }
       .dropdown-content {
         position: static;
         box-shadow: none;
-        border-radius: 0;
-        background-color: #e7f1ff;
+        background-color: #e6f0ff;
+        color: black;
       }
     }
   </style>
@@ -111,7 +122,8 @@
 
   <nav class="navbar">
     <div class="logo">CamdynCanCode</div>
-    <ul class="nav-menu">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-menu" id="navMenu">
       <li class="nav-item"><a href="/">Home</a></li>
       <li class="nav-item">
         <a tabindex="0">Apps ▼</a>
@@ -131,12 +143,18 @@
 
   <main>
     <h1>Welcome to CamdynCanCode</h1>
-    <p>Discover our apps and games! Use the navigation bar above to explore Code Breaker, Rizzler, and Ignition Point.</p>
+    <p>This is the home of my apps and games!</p>
   </main>
 
   <footer>
     &copy; 2025 CamdynCanCode. All rights reserved.
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
