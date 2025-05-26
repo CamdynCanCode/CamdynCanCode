@@ -3,143 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Camdyn Can Code</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .navbar {
-      background-color: #007acc;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      justify-content: space-between;
-      position: relative;
-    }
-    .left-nav {
-      display: flex;
-      align-items: center;
-    }
-    .logo {
-      font-weight: bold;
-      font-size: 24px;
-      margin-right: 20px;
-    }
-    .hamburger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .nav-item {
-      position: relative;
-      margin-left: 15px;
-    }
-    .nav-item > a {
-      color: white;
-      cursor: pointer;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      color: black;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border-radius: 4px;
-      top: 30px;
-      z-index: 1001;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 10px 15px;
-    }
-    .dropdown-content a:hover {
-      background-color: #f0f0f0;
-      color: #007acc;
-    }
-    .nav-item:hover .dropdown-content,
-    .nav-item:focus-within .dropdown-content {
-      display: block;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      flex: 1;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px 10px;
-      color: #777;
-      font-size: 14px;
-      background: #f0f0f0;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #007acc;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        z-index: 1002;
-        padding: 20px;
-      }
-      .nav-menu.show {
-        display: flex;
-      }
-      .nav-item {
-        margin: 15px 0;
-      }
-      .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: #e6f0ff;
-        color: black;
-      }
-    }
-  </style>
+  <title>Code Breaker - Privacy Policy</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-
   <nav class="navbar">
     <div class="left-nav">
       <div class="logo">Camdyn Can Code</div>
       <ul class="nav-menu" id="navMenu">
         <li class="nav-item"><a href="/index.html">Home</a></li>
-        <li class="nav-item">
-          <a tabindex="0">Apps ▼</a>
+        <li class="nav-item" tabindex="0">
+          <a>Apps ▼</a>
           <div class="dropdown-content">
             <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
             <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a tabindex="0">Games ▼</a>
+        <li class="nav-item" tabindex="0">
+          <a>Games ▼</a>
           <div class="dropdown-content">
             <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
           </div>
@@ -151,21 +32,14 @@
 
   <main>
     <h1>Privacy Policy for Code Breaker</h1>
-    <p>We use Google AdMob to serve ads in Code Breaker. AdMob may collect limited information for ad targeting and performance measurement.</p>
-    <p>Camdyn Can Code does not store or process any personal data directly. Ad-related data is handled by Google, following their privacy policy.</p>
-    <p>You can review Google’s AdMob policy at: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a>.</p>
+    <p><strong>Legal Notice:</strong> We collect data for AdMob advertising purposes as required by Google policies. Your information is handled securely and in compliance with applicable laws.</p>
+    <p>We do not collect any other personal data beyond what is necessary for ad services.</p>
   </main>
-
 
   <footer>
     &copy; 2025 Camdyn Can Code. All rights reserved.
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
-    }
-  </script>
-
+  <script src="/script.js"></script>
 </body>
 </html>
