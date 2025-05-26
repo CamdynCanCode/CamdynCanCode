@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CamdynCanCode</title>
+  <title>Camdyn Can Code</title>
   <style>
     body {
       margin: 0;
@@ -23,10 +23,16 @@
       align-items: center;
       padding: 10px 20px;
       justify-content: space-between;
+      position: relative;
+    }
+    .left-nav {
+      display: flex;
+      align-items: center;
     }
     .logo {
       font-weight: bold;
       font-size: 24px;
+      margin-right: 20px;
     }
     .hamburger {
       display: none;
@@ -41,7 +47,7 @@
     }
     .nav-item {
       position: relative;
-      margin-left: 20px;
+      margin-left: 15px;
     }
     .nav-item > a {
       color: white;
@@ -121,33 +127,34 @@
 <body>
 
   <nav class="navbar">
-    <div class="logo">CamdynCanCode</div>
+    <div class="left-nav">
+      <div class="logo">Camdyn Can Code</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a tabindex="0">Apps ▼</a>
+          <div class="dropdown-content">
+            <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
+            <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a tabindex="0">Games ▼</a>
+          <div class="dropdown-content">
+            <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item"><a href="/">Home</a></li>
-      <li class="nav-item">
-        <a tabindex="0">Apps ▼</a>
-        <div class="dropdown-content">
-          <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
-          <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a tabindex="0">Games ▼</a>
-        <div class="dropdown-content">
-          <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
-        </div>
-      </li>
-    </ul>
   </nav>
 
   <main>
-    <h1>Welcome to CamdynCanCode</h1>
-    <p>This is the home of my apps and games!</p>
+    <h1>Welcome to Camdyn Can Code</h1>
+    <p>Explore our apps and games using the menu above!</p>
   </main>
 
   <footer>
-    &copy; 2025 CamdynCanCode. All rights reserved.
+    &copy; 2025 Camdyn Can Code. All rights reserved.
   </footer>
 
   <script>
