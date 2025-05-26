@@ -5,23 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy - Code Breaker</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #333; }
-    h1 { color: #007acc; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      background-color: #007acc;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-right: 40px;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-item {
+      position: relative;
+      margin-right: 30px;
+    }
+    .nav-item > a {
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: #333;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      top: 35px;
+      z-index: 1001;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+      color: #007acc;
+    }
+    .nav-item:hover .dropdown-content,
+    .nav-item:focus-within .dropdown-content {
+      display: block;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      color: #777;
+      font-size: 14px;
+      background: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-wrap: wrap;
+      }
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #e7f1ff;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Code Breaker</h1>
-  <p>
-    We respect your privacy. Code Breaker does not collect personal data directly from users.
-  </p>
-  <p>
-    However, this app uses <strong>Google AdMob</strong> to serve advertisements. AdMob may collect anonymized usage data and device identifiers to provide personalized ads. For more information, please refer to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
-  </p>
-  <p>
-    We do not share or sell your personal information.
-  </p>
-  <p>
-    By using Code Breaker, you agree to the collection of data by AdMob as described above.
-  </p>
+
+  <nav class="navbar">
+    <div class="logo">CamdynCanCode</div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="/">Home</a></li>
+      <li class="nav-item">
+        <a tabindex="0">Apps ▼</a>
+        <div class="dropdown-content">
+          <a href="/CodeBreaker/privacyPolicy.html">Code Breaker</a>
+          <a href="/Rizzler/privacyPolicy.html">Rizzler</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a tabindex="0">Games ▼</a>
+        <div class="dropdown-content">
+          <a href="/IgnitionPoint/privacyPolicy.html">Ignition Point</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Privacy Policy for Code Breaker</h1>
+    <p>
+      We respect your privacy. Code Breaker does not collect personal data directly from users.
+    </p>
+    <p>
+      However, this app uses <strong>Google AdMob</strong> to serve advertisements. AdMob may collect anonymized usage data and device identifiers to provide personalized ads.
+      See the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+    </p>
+    <p>
+      By using Code Breaker, you agree to the collection of data by AdMob as described above.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 CamdynCanCode. All rights reserved.
+  </footer>
+
 </body>
 </html>
